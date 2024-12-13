@@ -57,6 +57,7 @@ RUN apk add --no-cache --virtual .build-deps \
 
 ### luarocks install
 RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-http
+RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-openssl
 ###
 
 
