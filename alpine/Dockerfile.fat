@@ -55,6 +55,11 @@ RUN apk add --no-cache --virtual .build-deps \
     && apk del .build-deps .gettext \
     && mv /tmp/envsubst /usr/local/bin/
 
+### luarocks install
+RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-http
+###
+
+
 # Add LuaRocks paths
 # If OpenResty changes, these may need updating:
 #    /usr/local/openresty/bin/resty -e 'print(package.path)'
